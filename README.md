@@ -19,8 +19,11 @@
    
 ##使用技術
 PHP 8.0
+
 Laravel 10.0
+
 MySQL 8.0
+
 Docker / Docker Compose
 
 ##ER図
@@ -30,4 +33,5 @@ Docker / Docker Compose
 
 ##URL
 開発環境:http:localhost/
+
 phpMyAdmin: http://localhost:8080/
