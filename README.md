@@ -24,7 +24,8 @@ MySQL 8.0
 Docker / Docker Compose
 
 ##ER図
-/home/xx1797/coachtech/laravel/web-form/src/routes/.drawio.png
+![drawio](https://github.com/user-attachments/assets/44ce3e9a-67cf-46ad-8a8d-fcbd5fa8c9d6)
+
 
 ##URL
 開発環境:http:localhost/
