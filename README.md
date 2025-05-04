@@ -1,26 +1,32 @@
-# お問い合わせフォームアプリケーション
+# お問い合わせフォーム
 
 ## 環境構築
 
-以下の手順で環境構築を行ってください。
+### Dockerビルド手順
 
-```bash
-# Dockerイメージのビルド
-docker-compose build
+1. git clone リンク
+2. docker-compose up-d-build
 
-# コンテナの起動
-docker-compose up -d
+* MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせて docker-compose.yml ファイルを編集してください。
 
-# Laravelの依存関係をインストール
-docker-compose exec app composer install
+###Laravel環境構築
+1. docker-compose exec php bash
+2. composer install
+3..env.exampleファイルから.envを作成し、環境変数を変更
+4. php artisan key:generate
+5. php artisan migrate
+6. php artisan db:seed
+   
+##使用技術
+PHP 8.0
+Laravel 10.0
+MySQL 8.0
+Docker / Docker Compose
 
-# .envファイルの作成とAPP_KEYの生成
-cp .env.example .env
-docker-compose exec app php artisan key:generate
+##ER図
+![image](https://github.com/user-attachments/assets/28bfe25b-0234-42b9-8707-e672881c1558)
 
-# マイグレーションとシーディング
-docker-compose exec app php artisan migrate:fresh --seed
 
-# フロントエンドのビルド
-docker-compose exec app npm install
-docker-compose exec app npm run dev
+##URL
+開発環境:http:localhost/
+phpMyAdmin: http://localhost:8080/
